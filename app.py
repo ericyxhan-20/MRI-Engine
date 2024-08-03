@@ -13,4 +13,4 @@ st.title("Nathan's MRI Prediction Engine")
 engine = MRIEngine()
 engine.read_flair()
 
-print("Sucess!")
+print("Success!")
