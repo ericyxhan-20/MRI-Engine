@@ -2,7 +2,7 @@ import nibabel as nib
 
 class MRIEngine:
     def __init__(self):
-        self.flair_path = '/Users/erichan/Documents/Projects/MRI-Engine/BraTS20_Training_006_flair copy.nii'
+        self.flair_path = './BraTS20_Training_006_flair.nii'
     def read_flair(self):
         # Upload image file to Colab's local runtime files first
         # Load the NIfTI file using nibabel
