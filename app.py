@@ -10,7 +10,7 @@ from mri_engine import MRIEngine
 
 st.title("Nathan's MRI Prediction Engine")
 
-# engine = MRIEngine()
-# engine.read_flair()
+engine = MRIEngine()
+engine.read_flair()
 
 print("Sucess!")
