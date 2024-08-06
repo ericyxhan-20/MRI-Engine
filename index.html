@@ -1,0 +1,67 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Combined View</title>
+        <style>
+            body, html {
+                margin: 0;
+                height: 100%;
+                overflow: hidden;
+                background-color: black;
+            }
+            h1 {
+                color: white;
+            }
+            #title {
+                margin-top: 5%;
+                margin-left: 5%;
+            }
+            .iframe-container1 {
+                height: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .iframe-container2 {
+                height: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .iframe-container1 > iframe, .iframe-container1 > img {
+                width: 50%;
+                height: 100%;
+                border: none;
+            }
+            .iframe-container2 > iframe {
+                width: 50%;
+                height: 100%;
+                border: none;
+            }
+            .image-container {
+                height: 30%;
+            }
+            .image-container img {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1 id="title">Nathan's Glioma Detection Engine</h1>
+        </div>
+        <div class="iframe-container1">
+            <img src=""></img>
+            <iframe src=""></iframe>
+        </div>
+        <div class="iframe-container2">
+            <iframe src=""></iframe>
+        </div>
+    </body>
+    </html>
+    

@@ -1,0 +1,214 @@
+def create_home_html():
+    html_content = f"""
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Combined View</title>
+        <style>
+            body, html {{
+                margin: 0;
+                height: 100%;
+                overflow: hidden;
+                background-color: black;
+            }}
+            h1 {{
+                color: white;
+            }}
+            #title {{
+                margin-top: 5%;
+                margin-left: 5%;
+            }}
+            .iframe-container1 {{
+                height: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }}
+            .iframe-container2 {{
+                height: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }}
+            .iframe-container1 > iframe, .iframe-container1 > img {{
+                width: 50%;
+                height: 100%;
+                border: none;
+            }}
+            .iframe-container2 > iframe {{
+                width: 50%;
+                height: 100%;
+                border: none;
+            }}
+            .image-container {{
+                height: 30%;
+            }}
+            .image-container img {{
+                width: 100%;
+                height: 100%;
+                border: none;
+            }}
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1 id="title">Nathan's Glioma Detection Engine</h1>
+        </div>
+        <div class="iframe-container1">
+            <img src=""></img>
+            <iframe src=""></iframe>
+        </div>
+        <div class="iframe-container2">
+            <iframe src=""></iframe>
+        </div>
+    </body>
+    </html>
+    """
+    combined_html_path = 'visualization.html'
+    with open(combined_html_path, 'w') as f:
+        f.write(html_content)
+
+def create_visualization_html(patient_file, file1, file2):
+    html_content = f"""
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Combined View</title>
+        <style>
+            body, html {{
+                margin: 0;
+                height: 100%;
+                overflow: hidden;
+                background-color: black;
+            }}
+            h1, h3 {{
+                color: white;
+            }}
+            #title, #patient {{
+                margin-top: 5%;
+                margin-left: 5%;
+            }}
+            .iframe-container1 {{
+                height: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }}
+            .iframe-container2 {{
+                height: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }}
+            .iframe-container1 > iframe, .iframe-container1 > img {{
+                width: 50%;
+                height: 100%;
+                border: none;
+            }}
+            .iframe-container2 > iframe {{
+                width: 50%;
+                height: 100%;
+                border: none;
+            }}
+            .image-container {{
+                height: 30%;
+            }}
+            .image-container img {{
+                width: 100%;
+                height: 100%;
+                border: none;
+            }}
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1 id="title">Nathan's Glioma Detection Engine</h1>
+        </div>
+        <h3 id="patient">{patient_file}</h3>
+        <div class="iframe-container1">
+            <img src=".{file1}"></img>
+            <iframe src=".{file2}"></iframe>
+        </div>
+        <div class="iframe-container2">
+            <iframe src=""></iframe>
+        </div>
+    </body>
+    </html>
+    """
+    combined_html_path = 'visualization.html'
+    with open(combined_html_path, 'w') as f:
+        f.write(html_content)
+
+def create_combined_html(patient_file, file1, file2, file3):
+    html_content = f"""
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Combined View</title>
+        <style>
+            body, html {{
+                margin: 0;
+                height: 100%;
+                overflow: hidden;
+                background-color: black;
+                display: flex;
+                flex-direction: column;
+            }}
+            h1, h3 {{
+                color: white;
+                margin-top: 5%;
+                margin-left: 5%;
+            }}
+            #title {{
+                margin-bottom: 15px;
+            }}
+            .iframe-container1 {{
+                flex: 1;
+                display: flex;
+                height: 50%;
+                flex-direction: row;
+                justify-content: space-between;
+            }}
+            .iframe-container2 {{
+                flex: 1;
+                display: flex;
+                height: 50%;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }}
+            .iframe-container1 > iframe, .iframe-container1 > img {{
+                width: 50%;
+                height: 100%;
+                border: none;
+            }}
+            .iframe-container2 > iframe {{
+                width: 50%;
+                height: 100%;
+                border: none;
+            }}
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1 id="title">Nathan's Glioma Detection Engine</h1>
+        </div>
+        <h3 id="patient">{patient_file}</h3>
+        <div class="iframe-container1">
+            <img src=".{file1}">
+            <iframe src=".{file2}"></iframe>
+        </div>
+        <div class="iframe-container2">
+            <iframe src=".{file3}"></iframe>
+        </div>
+    </body>
+    </html>
+    """
+    combined_html_path = 'visualization.html'
+    with open(combined_html_path, 'w') as f:
+        f.write(html_content)

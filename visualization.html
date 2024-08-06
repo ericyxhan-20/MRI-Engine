@@ -1,0 +1,65 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Combined View</title>
+        <style>
+            body, html {
+                margin: 0;
+                height: 100%;
+                overflow: hidden;
+                background-color: black;
+                display: flex;
+                flex-direction: column;
+            }
+            h1, h3 {
+                color: white;
+                margin-top: 5%;
+                margin-left: 5%;
+            }
+            #title {
+                margin-bottom: 15px;
+            }
+            .iframe-container1 {
+                flex: 1;
+                display: flex;
+                height: 50%;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .iframe-container2 {
+                flex: 1;
+                display: flex;
+                height: 50%;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .iframe-container1 > iframe, .iframe-container1 > img {
+                width: 50%;
+                height: 100%;
+                border: none;
+            }
+            .iframe-container2 > iframe {
+                width: 50%;
+                height: 100%;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1 id="title">Nathan's Glioma Detection Engine</h1>
+        </div>
+        <h3 id="patient">BraTS20 Patient 006</h3>
+        <div class="iframe-container1">
+            <img src="./patient_data_files/patient_006/BraTS20_Training_006_brain.gif">
+            <iframe src="./patient_data_files/patient_006/BraTS20_Training_006_flair_cross_sections.html"></iframe>
+        </div>
+        <div class="iframe-container2">
+            <iframe src="./patient_data_files/patient_006/BraTS20_Training_006_result.html"></iframe>
+        </div>
+    </body>
+    </html>
+    
