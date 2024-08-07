@@ -3,18 +3,21 @@ import os
 from mri_engine import MRIEngine
 from render_html import create_combined_html, create_home_html, create_visualization_html
 
-ROOT_PATH = "/Users/erichan/Documents/Projects/MRI-Engine"
+
+ROOT_PATH = os.path.dirname(os.path.abspath(__file__))  # Get the current file's directory
 
 running = True
 while(running):
     print("Starting Up Nathan's Glioma Detection Engine...")
 
     create_home_html()
+    # Open the HTML file in Safari
     webbrowser.open_new_tab(f"file://{ROOT_PATH}/visualization.html")
 
     print()
     print("Patient Directory")
     file_names = os.listdir("./patient_data_files")
+    file_names.sort()
     for file_name in file_names:
         print(f"  - {file_name}")
 

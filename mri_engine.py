@@ -146,7 +146,7 @@ class MRIEngine:
         # Customize the layout
         fig.update_layout(
             title=f'Prediction Probabilities<br>True Label: {"High" if TRUE_LABEL==1 else "Low"} | Predicted Label: {"High" if final_prediction==1 else "Low"}',
-            xaxis_title='Class',
+            xaxis_title='',
             yaxis_title='Probability',
             font=dict(family="Arial", size=14, color="white"),
             plot_bgcolor='rgb(0, 0, 0)',
@@ -233,6 +233,12 @@ class MRIEngine:
         add_slice_to_plotter('y', y_slice)  # Add y slice
         add_slice_to_plotter('z', z_slice)  # Add z slice
 
+        # Add title and slice coordinates
+        plotter.add_text("Cross Section Visualization", position='upper_left', color='white', font_size=20)
+        plotter.add_text(f"X Slice: {x_slice}", position=(0.02, 0.80), color='white', font_size=16)
+        plotter.add_text(f"Y Slice: {y_slice}", position=(0.02, 0.75), color='white', font_size=16)
+        plotter.add_text(f"Z Slice: {z_slice}", position=(0.02, 0.70), color='white', font_size=16)
+        
         # Save the visualization to an HTML file
         html_file = self.mri_prefix + '_flair_cross_sections.html'
         plotter.export_html(html_file)
