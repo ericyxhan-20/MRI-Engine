@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Combined View</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
         <style>
             body, html {
                 margin: 0;
@@ -15,8 +16,14 @@
             }
             h1, h3 {
                 color: white;
-                margin-top: 5%;
                 margin-left: 5%;
+                font-family: 'Open Sans', sans-serif
+            }
+            h1 {
+                margin-top: 5%;
+            }
+            h3 {
+                margin-top: 0;
             }
             #title {
                 margin-bottom: 15px;
@@ -24,20 +31,21 @@
             .iframe-container1 {
                 flex: 1;
                 display: flex;
-                height: 50%;
+                height: 40%;
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: center;
+                align-items: center
             }
             .iframe-container2 {
                 flex: 1;
                 display: flex;
-                height: 50%;
+                height: 100%;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
             }
             .iframe-container1 > iframe, .iframe-container1 > img {
-                width: 50%;
+                width: 40%;
                 height: 100%;
                 border: none;
             }
@@ -50,7 +58,7 @@
     </head>
     <body>
         <div id="header">
-            <h1 id="title">Nathan's Glioma Detection Engine</h1>
+            <h1 id="title">Heka: Glioma Detection Engine</h1>
         </div>
         <h3 id="patient">BraTS20 Patient 006</h3>
         <div class="iframe-container1">
